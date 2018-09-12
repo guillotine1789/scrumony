@@ -1,26 +1,11 @@
-import React from 'react';
-import { Image } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { colors } from '../../config/styles';
 
-import styles from './styles';
-
-const Card = (props) => {
-    const gravatarOptions = {
-        size: props.size,
-        parameters: { size: 200 },
-    };
-
-    const uri = gravatar.imageUrl(gravatarOptions);
-    return (
-        <Image
-            style={styles.avatar}
-            source={{ uri }}
-            defaultSource={avatarImage}
-        />
-    );
-};
-
-Card.propTypes = {
-    size: React.PropTypes.string,
-};
-
-export default Card;
+export default StyleSheet.create({
+    card: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.background,
+    },
+});
