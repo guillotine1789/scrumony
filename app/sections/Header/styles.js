@@ -11,7 +11,7 @@ export default StyleSheet.create({
         flex : 1,
         flexDirection : 'row',
         alignItems: 'center',
-        backgroundColor : 'green'
+        backgroundColor : 'white'
     },
     logoView: {
         flex : 2
