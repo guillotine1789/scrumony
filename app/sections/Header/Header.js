@@ -1,17 +1,27 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import styles from './styles';
+import {Button} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-class Header extends Component {
+class Header extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <View>
-                <Text style={styles.header.text}>{this.props.role}</Text>
-                <Text style={styles.header.text}>{this.props.team}</Text>
+            <View style={styles.headerView}>
+                <Button onPress={this.props.role}
+                        icon={ <Icon
+                            name='arrow-left'
+                            size={15}
+                            color='white'/>
+                    }
+                    title='BUTTON'/>
+                <Image style={styles.logoView} source= {require('../../images/logo/Scrumony_36p.png')}/>
+                <Text style={styles.headerText}>{this.props.role}</Text>
+                <Text style={styles.headerText}>{this.props.team}</Text>
             </View>
         );
     }
