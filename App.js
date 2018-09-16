@@ -1,6 +1,6 @@
 import React from 'react';
 import {Platform, StatusBar, StyleSheet, Text, View} from 'react-native';
-import Home from "./app/views/Home";
+import Home from "./app/views/Home/Home";
 import { Font } from 'expo';
 import {FontAwesome} from '@expo/vector-icons';
 
@@ -9,7 +9,6 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Home/>
-          <FontAwesome name = "space-shuttle" size={15} color={'orange'}/>
       </View>
     );
   }
@@ -31,6 +30,6 @@ export const styles = StyleSheet.create({
     container: {
         flex : 1,
         paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
-        backgroundColor: 'darkblue'
+        backgroundColor: 'white'
     },
 });

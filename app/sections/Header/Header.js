@@ -1,9 +1,10 @@
 import React from 'react';
 import {Text, View, Image} from 'react-native';
 import styles from './styles';
-import { Button } from 'react-native-elements';
-import {FontAwesome} from '@expo/vector-icons';
-class Header extends React.Component {
+import {Feather} from '@expo/vector-icons';
+import { Header } from 'react-native-elements';
+
+class HeaderScrumony extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -13,16 +14,16 @@ class Header extends React.Component {
 
     render() {
         return (
-            <View style={styles.headerView}>
-                <FontAwesome name = "space-shuttle" size={15} color={'blue'}/>
-                <Button onPress= {this.myOnPress} title='BUTTON'/>
-                <Image style={styles.logoView} source= {require('../../images/logo/Scrumony_36p.png')}/>
-                <Text style={styles.headerText}>{this.props.role}</Text>
-                <Text style={styles.headerText}>{this.props.team}</Text>
+            <View>
+                <Header style={styles.headerView} backgroundColor={'#65AAAB'}
+                    leftComponent={<Feather name="menu" size={30} color="#073030" />}
+                    centerComponent={<Image style={styles.logoView} source= {require('../../images/logo/Scrumony_36p.png')}/>}
+                    rightComponent={<Feather name="home" size={30} color="#073030" />}
+                />
             </View>
         );
     }
 }
 
 
-export default Header;
+export default HeaderScrumony;
