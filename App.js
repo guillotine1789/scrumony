@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Platform, StatusBar, StyleSheet, Text, View} from 'react-native';
 import Home from "./app/views/Home";
 import { Font } from 'expo';
 import {FontAwesome} from '@expo/vector-icons';
@@ -27,8 +27,10 @@ export default class App extends React.Component {
     }
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
-        flex : 1
-    }
+        flex : 1,
+        paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
+        backgroundColor: 'darkblue'
+    },
 });
