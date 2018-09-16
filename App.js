@@ -3,11 +3,13 @@ import {Platform, StatusBar, StyleSheet, Text, View} from 'react-native';
 import Home from "./app/views/Home/Home";
 import { Font } from 'expo';
 import {FontAwesome} from '@expo/vector-icons';
+import HeaderScrumony from "./app/sections/Header/Header";
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+          <HeaderScrumony role='Developer' team='Team 4'/>
         <Home/>
       </View>
     );
