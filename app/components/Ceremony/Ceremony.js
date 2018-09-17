@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, View, TouchableHighlight, Text} from 'react-native';
+import {Image, View, TouchableOpacity, Text} from 'react-native';
 import styles from './styles'
 
 export class Ceremony extends React.Component {
@@ -10,9 +10,9 @@ export class Ceremony extends React.Component {
     render() {
         return (
             <View style = {styles.ceremony}>
-                <TouchableHighlight onPress={this._onPressButton} >
+                <TouchableOpacity onPress={this._onPressButton} >
                     <Image source={this.props.imagePath}/>
-                </TouchableHighlight>
+                </TouchableOpacity>
                 <Text style = {styles.name}> {this.props.name} </Text>
             </View>
         );
