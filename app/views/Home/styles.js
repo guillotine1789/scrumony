@@ -2,13 +2,14 @@ import {StyleSheet} from "react-native";
 
 export default styles = StyleSheet.create({
     container: {
-        flex: 2,
+        flex: 1,
         padding: 5,
-        flexDirection: 'column'
+        flexDirection: 'column',
+        alignItems: 'center'
     },
     stack: {
-        flex: 2,
-        padding: 2,
-        flexDirection: 'row'
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center'
     }
 });

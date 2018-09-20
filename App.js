@@ -3,6 +3,7 @@ import {Platform, StatusBar, StyleSheet, View} from 'react-native';
 import Home from './app/views/Home/Home';
 import {Font} from 'expo';
 import HeaderScrumony from './app/sections/Header/Header';
+import { HomeStack } from './app/config/routes';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -21,7 +22,7 @@ export default class App extends React.Component {
         return (
             <View style={styles.container}>
                 <HeaderScrumony role='Developer' team='Team 4'/>
-                <Home/>
+                <HomeStack/>
             </View>
         );
     }

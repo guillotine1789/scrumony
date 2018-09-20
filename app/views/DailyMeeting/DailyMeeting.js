@@ -1,10 +1,10 @@
 import React from 'react';
 import {Text} from "react-native";
 
-export default class Retrospective extends React.Component {
+export default class DailyMeeting extends React.Component {
     render() {
         return (
-            <Text>retro</Text>
+            <Text>DailyMeeting</Text>
         );
     }
 }
